@@ -40,61 +40,47 @@ export default function App() {
   return (
     <div>
       {/* Loading Screen */}
-      {loading && (
-        <div className="fixed inset-0 bg-[#1a1a2e] z-50 flex flex-col items-center justify-center">
-          {/* HOPS Logo */}
-          <div className="mb-8">
-            <h1 className="text-8xl font-black tracking-tight flex">
-              <span className="text-[#8B89FF]">H</span>
-              <span className="text-[#FF8A3D]">O</span>
-              <span className="text-[#65d6ad]">P</span>
-              <span className="text-[#FFD43B]">S</span>
-            </h1>
-          </div>
-          
-          {/* Loading Text and Bar */}
-          <div className="flex flex-col items-center space-y-4">
-            <h2 className="text-2xl text-white/90 font-medium">Loading Game...</h2>
-            <div className="w-64 h-2 bg-white/10 rounded-full overflow-hidden">
-              <div className="h-full w-full bg-gradient-to-r from-[#8B89FF] via-[#65d6ad] to-[#FFD43B] rounded-full animate-[loading_2s_ease-in-out]"></div>
-            </div>
-          </div>
-          
-          {/* Loading Indicator */}
-          <div className="absolute bottom-8 flex justify-center w-full">
-            <div className="flex gap-2">
-              <div className="w-2 h-2 rounded-full bg-[#8B89FF] animate-bounce"></div>
-              <div className="w-2 h-2 rounded-full bg-[#FF8A3D] animate-bounce [animation-delay:0.2s]"></div>
-              <div className="w-2 h-2 rounded-full bg-[#65d6ad] animate-bounce [animation-delay:0.4s]"></div>
-              <div className="w-2 h-2 rounded-full bg-[#FFD43B] animate-bounce [animation-delay:0.6s]"></div>
-            </div>
-          </div>
-        </div>
-      )}
+{loading && (
+  <div className="fixed inset-0 bg-[#0F0A2A] z-50 flex flex-col items-center justify-center">
+    {/* ASTRO Logo */}
+    <div className="mb-8">
+      <h1 className="text-8xl font-black tracking-tight flex">
+        <span className="text-indigo-400">A</span>
+        <span className="text-violet-400">S</span>
+        <span className="text-fuchsia-400">T</span>
+        <span className="text-purple-400">R</span>
+        <span className="text-indigo-400">O</span>
+      </h1>
+    </div>
+    
+    {/* Loading Text and Bar */}
+    <div className="flex flex-col items-center space-y-4">
+      <h2 className="text-2xl text-white/90 font-medium">Loading Game...</h2>
+      <div className="w-64 h-2 bg-white/10 rounded-full overflow-hidden">
+        <div className="h-full w-full bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-500 rounded-full animate-[loading_2s_ease-in-out]"></div>
+      </div>
+    </div>
+    
+    {/* Loading Indicator */}
+    <div className="absolute bottom-8 flex justify-center w-full">
+      <div className="flex gap-2">
+        <div className="w-2 h-2 rounded-full bg-indigo-400 animate-bounce"></div>
+        <div className="w-2 h-2 rounded-full bg-violet-400 animate-bounce [animation-delay:0.2s]"></div>
+        <div className="w-2 h-2 rounded-full bg-fuchsia-400 animate-bounce [animation-delay:0.4s]"></div>
+        <div className="w-2 h-2 rounded-full bg-purple-400 animate-bounce [animation-delay:0.6s]"></div>
+      </div>
+    </div>
+  </div>
+)}
       {/* HOPS Logo */}
       <div className="fixed top-10 left-10 z-40">
-        <h1 className="text-8xl font-black tracking-tight flex">
-          <span className="inline-block animate-bounce-slow relative">
-            {/* H Letter */}
-            <span className="absolute -inset-1 text-black blur-[2px] select-none">H</span>
-            <span className="relative text-[#8B89FF]">H</span>
-          </span>
-          {/* O Letter */}
-          <span className="inline-block animate-bounce-slow relative [animation-delay:0.1s]">
-            <span className="absolute -inset-1 text-black blur-[2px] select-none">O</span>
-            <span className="relative text-[#FF8A3D]">O</span>
-          </span>
-          {/* P Letter */}
-          <span className="inline-block animate-bounce-slow relative [animation-delay:0.2s]">
-            <span className="absolute -inset-1 text-black blur-[2px] select-none">P</span>
-            <span className="relative text-[#65d6ad]">P</span>
-          </span>
-          {/* S Letter */}
-          <span className="inline-block animate-bounce-slow relative [animation-delay:0.3s]">
-            <span className="absolute -inset-1 text-black blur-[2px] select-none">S</span>
-            <span className="relative text-[#FFD43B]">S</span>
-          </span>
-        </h1>
+      <h1 className="text-8xl font-black tracking-tight flex">
+        <span className="text-indigo-400">A</span>
+        <span className="text-violet-400">S</span>
+        <span className="text-fuchsia-400">T</span>
+        <span className="text-purple-400">R</span>
+        <span className="text-indigo-400">O</span>
+      </h1>
       </div>
 
       {/* About Modal */}
@@ -102,7 +88,7 @@ export default function App() {
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-gray-900/90 max-w-2xl rounded-2xl p-8 border border-[#65d6ad]/30 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
             <div className="flex justify-between items-start mb-6">
-              <h2 className="text-3xl font-bold" style={{ color: '#8B89FF' }}>About HOPS</h2>
+              <h2 className="text-3xl font-bold" style={{ color: '#8B89FF' }}>About Astro</h2>
               <button 
                 onClick={() => setShowAbout(false)}
                 className="text-gray-400 hover:text-white"
@@ -111,11 +97,11 @@ export default function App() {
               </button>
             </div>
             <div className="space-y-4 text-gray-200">
-              <p>Welcome to HOPS - The first browser-based competitive platformer where speed, skill, and strategy collide in daily challenges!</p>
+              <p>Welcome to Astro - The first browser-based competitive platformer where speed, skill, and strategy collide in daily challenges!</p>
               
               <div className="space-y-2">
                 <h3 className="text-xl font-bold" style={{ color: '#FF8A3D' }}>Daily Rush</h3>
-                <p>Every 24 hours, a new challenge awaits! Race against the community, perfect your runs, and climb the leaderboard. Only the fastest frog wins the daily SOL prize pool! 🏆</p>
+                <p>Every 24 hours, a new challenge awaits! Race against the community, perfect your runs, and climb the leaderboard. Only the fastest astronaut wins the daily SOL prize pool! 🏆</p>
               </div>
 
               <div className="space-y-2">
@@ -172,7 +158,7 @@ export default function App() {
               </div>
 
               <div className="mt-6 p-4 bg-gradient-to-r from-[#8B89FF]/20 to-[#65d6ad]/20 rounded-xl">
-                <p className="text-center font-bold">Ready to hop in? Join the fastest-growing speedrunning community on Solana! 🐸✨</p>
+                <p className="text-center font-bold">Ready to hop in? Join the fastest-growing speedrunning community on Solana!</p>
               </div>
             </div>
           </div>
@@ -206,53 +192,47 @@ export default function App() {
             <div className={`h-12 w-48 flex items-center justify-center rounded-xl bg-white/20 border border-white/30 transition-all duration-200 ${activeKey === ' ' ? 'bg-white/40' : ''}`}>
               <span className="text-white/90 font-medium text-sm">SPACE</span>
             </div>
-            <div className={`h-12 w-48 flex items-center justify-center rounded-xl bg-white/20 border border-white/30 transition-all duration-200 ${activeKey === 'shift' ? 'bg-white/40' : ''}`}>
-              <span className="text-white/90 font-medium text-sm">SHIFT</span>
-            </div>
-            <div className="flex justify-between text-white/50 text-xs px-2">
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Navigation Bar */}
       <nav className="fixed top-0 w-full z-40 flex justify-center items-center p-4">
-        <div className="flex gap-4">
-          <a
-            href="https://x.com/hopsgame"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-3 rounded-2xl bg-white/20 backdrop-blur-sm text-white font-semibold transition-all duration-300 hover:scale-105 hover:bg-white/30 shadow-lg min-w-[120px] text-center"
-          >
-            Twitter
-          </a>
+  <div className="flex gap-4">
+    <a
+      href="https://x.com/astrogame"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-8 py-3 rounded-xl bg-indigo-500/20 backdrop-blur-sm text-white font-medium transition-all duration-300 hover:scale-105 hover:bg-indigo-500/30 shadow-[0_0_15px_rgba(99,102,241,0.3)] min-w-[120px] text-center"
+    >
+      Twitter
+    </a>
 
-          <a
-            href="https://t.me/hopsportal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-3 rounded-2xl bg-white/20 backdrop-blur-sm text-white font-semibold transition-all duration-300 hover:scale-105 hover:bg-white/30 shadow-lg min-w-[120px] text-center"
-          >
-            Telegram
-          </a>
+    <a
+      href="https://t.me/astroportal"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-8 py-3 rounded-xl bg-indigo-500/20 backdrop-blur-sm text-white font-medium transition-all duration-300 hover:scale-105 hover:bg-indigo-500/30 shadow-[0_0_15px_rgba(99,102,241,0.3)] min-w-[120px] text-center"
+    >
+      Telegram
+    </a>
 
-          <button
-            onClick={() => setShowAbout(true)}
-            className="px-8 py-3 rounded-2xl bg-white/20 backdrop-blur-sm text-white font-semibold transition-all duration-300 hover:scale-105 hover:bg-white/30 shadow-lg min-w-[120px] text-center"
-          >
-            About
-          </button>
+    <button
+      onClick={() => setShowAbout(true)}
+      className="px-8 py-3 rounded-xl bg-indigo-500/20 backdrop-blur-sm text-white font-medium transition-all duration-300 hover:scale-105 hover:bg-indigo-500/30 shadow-[0_0_15px_rgba(99,102,241,0.3)] min-w-[120px] text-center"
+    >
+      About
+    </button>
 
-          <a
-            href="https://pump.fun/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-3 rounded-2xl bg-[#65d6ad]/30 backdrop-blur-sm text-white font-semibold transition-all duration-300 hover:scale-105 hover:bg-[#65d6ad]/40 shadow-lg min-w-[120px] text-center"
-          >
-            Buy Now
-          </a>
-        </div>
-      </nav>
+    <a
+      href="https://pump.fun/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-8 py-3 rounded-xl bg-violet-500/30 backdrop-blur-sm text-white font-medium transition-all duration-300 hover:scale-105 hover:bg-violet-500/40 shadow-[0_0_20px_rgba(139,92,246,0.4)] min-w-[120px] text-center"
+    >
+      Buy Now
+    </a>
+  </div>
+</nav>
 
       {/* Spline Scene */}
       <div style={{ width: '100vw', height: '100vh' }}>
