@@ -208,7 +208,7 @@ export default function App() {
     </a>
 
     <a
-      href="https://t.me/astroportal"
+      href="https://t.me/astrogamesol"
       target="_blank"
       rel="noopener noreferrer"
       className="px-8 py-3 rounded-xl bg-indigo-500/20 backdrop-blur-sm text-white font-medium transition-all duration-300 hover:scale-105 hover:bg-indigo-500/30 shadow-[0_0_15px_rgba(99,102,241,0.3)] min-w-[120px] text-center"
