@@ -256,7 +256,7 @@ export default function App() {
 
       {/* Spline Scene */}
       <div style={{ width: '100vw', height: '100vh' }}>
-        <Spline scene="https://prod.spline.design/UgeH0tX3o6QrrJME/scene.splinecode" />
+        <Spline scene="https://prod.spline.design/pXP5NYFSVko-UJ-X/scene.splinecode" />
       </div>
     </div>
   );
