@@ -45,11 +45,10 @@ export default function App() {
     {/* ASTRO Logo */}
     <div className="mb-8">
       <h1 className="text-8xl font-black tracking-tight flex">
-        <span className="text-indigo-400">A</span>
-        <span className="text-violet-400">S</span>
-        <span className="text-fuchsia-400">T</span>
-        <span className="text-purple-400">R</span>
-        <span className="text-indigo-400">O</span>
+      <span className="text-indigo-400">T</span>
+        <span className="text-indigo-400">U</span>
+        <span className="text-indigo-400">M</span>
+        <span className="text-indigo-400">P</span>
       </h1>
     </div>
     
@@ -60,26 +59,15 @@ export default function App() {
         <div className="h-full w-full bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-500 rounded-full animate-[loading_2s_ease-in-out]"></div>
       </div>
     </div>
-    
-    {/* Loading Indicator */}
-    <div className="absolute bottom-8 flex justify-center w-full">
-      <div className="flex gap-2">
-        <div className="w-2 h-2 rounded-full bg-indigo-400 animate-bounce"></div>
-        <div className="w-2 h-2 rounded-full bg-violet-400 animate-bounce [animation-delay:0.2s]"></div>
-        <div className="w-2 h-2 rounded-full bg-fuchsia-400 animate-bounce [animation-delay:0.4s]"></div>
-        <div className="w-2 h-2 rounded-full bg-purple-400 animate-bounce [animation-delay:0.6s]"></div>
-      </div>
-    </div>
   </div>
 )}
       {/* HOPS Logo */}
       <div className="fixed top-10 left-10 z-40">
       <h1 className="text-8xl font-black tracking-tight flex">
-        <span className="text-indigo-400">A</span>
-        <span className="text-violet-400">S</span>
-        <span className="text-fuchsia-400">T</span>
-        <span className="text-purple-400">R</span>
-        <span className="text-indigo-400">O</span>
+        <span className="text-indigo-400">T</span>
+        <span className="text-indigo-400">U</span>
+        <span className="text-indigo-400">M</span>
+        <span className="text-indigo-400">P</span>
       </h1>
       </div>
 
@@ -88,7 +76,7 @@ export default function App() {
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-gray-900/90 max-w-2xl rounded-2xl p-8 border border-[#65d6ad]/30 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
             <div className="flex justify-between items-start mb-6">
-              <h2 className="text-3xl font-bold" style={{ color: '#8B89FF' }}>About Astro</h2>
+              <h2 className="text-3xl font-bold" style={{ color: '#8B89FF' }}>About Tump</h2>
               <button 
                 onClick={() => setShowAbout(false)}
                 className="text-gray-400 hover:text-white"
@@ -97,7 +85,7 @@ export default function App() {
               </button>
             </div>
             <div className="space-y-4 text-gray-200">
-              <p>Welcome to Astro - The first browser-based competitive platformer where speed, skill, and strategy collide in daily challenges!</p>
+              <p>Welcome to Tump - The first browser-based competitive platformer where speed, skill, and strategy collide in daily challenges!</p>
               
               <div className="space-y-2">
                 <h3 className="text-xl font-bold" style={{ color: '#FF8A3D' }}>Daily Rush</h3>
@@ -199,21 +187,12 @@ export default function App() {
       <nav className="fixed top-0 w-full z-40 flex justify-center items-center p-4">
   <div className="flex gap-4">
     <a
-      href="https://x.com/astrogamesol"
+      href="https://x.com/soltump"
       target="_blank"
       rel="noopener noreferrer"
       className="px-8 py-3 rounded-xl bg-indigo-500/20 backdrop-blur-sm text-white font-medium transition-all duration-300 hover:scale-105 hover:bg-indigo-500/30 shadow-[0_0_15px_rgba(99,102,241,0.3)] min-w-[120px] text-center"
     >
       Twitter
-    </a>
-
-    <a
-      href="https://t.me/astrogamesol"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="px-8 py-3 rounded-xl bg-indigo-500/20 backdrop-blur-sm text-white font-medium transition-all duration-300 hover:scale-105 hover:bg-indigo-500/30 shadow-[0_0_15px_rgba(99,102,241,0.3)] min-w-[120px] text-center"
-    >
-      Telegram
     </a>
 
     <button
@@ -224,7 +203,7 @@ export default function App() {
     </button>
 
     <a
-      href="https://pump.fun/coin/EzuTB3gp4QkwuZT4qpJChHg9n6zX2DaCGhWMJmKBpump"
+      href="https://pump.fun"
       target="_blank"
       rel="noopener noreferrer"
       className="px-8 py-3 rounded-xl bg-violet-500/30 backdrop-blur-sm text-white font-medium transition-all duration-300 hover:scale-105 hover:bg-violet-500/40 shadow-[0_0_20px_rgba(139,92,246,0.4)] min-w-[120px] text-center"
@@ -236,7 +215,7 @@ export default function App() {
 
       {/* Spline Scene */}
       <div style={{ width: '100vw', height: '100vh' }}>
-        <Spline scene="https://prod.spline.design/pXP5NYFSVko-UJ-X/scene.splinecode" />
+        <Spline scene="https://prod.spline.design/UgeH0tX3o6QrrJME/scene.splinecode" />
       </div>
     </div>
   );
