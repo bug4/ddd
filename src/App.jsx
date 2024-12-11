@@ -203,7 +203,7 @@ export default function App() {
     </button>
 
     <a
-      href="https://pump.fun"
+      href="https://pump.fun/coin/Hk1Ch7FgeeQoXbruqsJARUPiJ5m3BmDjV1A6p5EEpump"
       target="_blank"
       rel="noopener noreferrer"
       className="px-8 py-3 rounded-xl bg-violet-500/30 backdrop-blur-sm text-white font-medium transition-all duration-300 hover:scale-105 hover:bg-violet-500/40 shadow-[0_0_20px_rgba(139,92,246,0.4)] min-w-[120px] text-center"
