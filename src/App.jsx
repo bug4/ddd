@@ -167,7 +167,7 @@ export default function App() {
       <nav className="fixed top-0 w-full z-40 flex justify-center items-center p-4">
         <div className="flex gap-4">
           <a
-            href="https://x.com/solFLYN"
+            href="https://x.com/FlynGame"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 rounded-xl bg-gradient-to-r from-[#FF8A3D] to-[#FFD43B] text-white font-bold transition-transform duration-300 hover:scale-110 shadow-[0_0_20px_rgba(255,138,61,0.5)] min-w-[120px] text-center"
