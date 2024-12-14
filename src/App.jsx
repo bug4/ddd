@@ -43,7 +43,7 @@ export default function App() {
           className="bg-clip-text text-transparent bg-gradient-to-r from-lime-400 via-lime-500 to-lime-400 animate-pulse"
           style={{ WebkitTextStroke: '1px #000' }}
         >
-          FLYN
+          Neko
         </span>
       </h1>
     </div>
@@ -65,7 +65,7 @@ export default function App() {
       className="bg-clip-text text-transparent bg-gradient-to-r from-lime-400 via-lime-500 to-lime-400"
       style={{ WebkitTextStroke: '1px #000' }}
     >
-      FLYN
+      Neko
     </span>
     <span 
       className="font-medium text-white mt-2"
@@ -86,7 +86,7 @@ export default function App() {
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-gray-900/90 max-w-2xl rounded-2xl p-8 border border-[#65d6ad]/30 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
             <div className="flex justify-between items-start mb-6">
-              <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8B89FF] to-[#FFD43B]">About FLYN</h2>
+              <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8B89FF] to-[#FFD43B]">About Neko</h2>
               <button 
                 onClick={() => setShowAbout(false)}
                 className="text-gray-400 hover:text-white"
@@ -95,7 +95,7 @@ export default function App() {
               </button>
             </div>
             <div className="space-y-4 text-gray-200">
-              <p>Welcome to FLYN - The first browser-based competitive platformer where speed, skill, and strategy collide in daily challenges!</p>
+              <p>Welcome to Neko - The first browser-based competitive platformer where speed, skill, and strategy collide in daily challenges!</p>
               
               <div className="space-y-2">
                 <h3 className="text-xl font-bold text-[#FF8A3D]">Daily Rush</h3>
@@ -167,7 +167,7 @@ export default function App() {
       <nav className="fixed top-0 w-full z-40 flex justify-center items-center p-4">
         <div className="flex gap-4">
           <a
-            href="https://x.com/FlynGame"
+            href="https://x.com/NekoGameSol"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 rounded-xl bg-gradient-to-r from-[#FF8A3D] to-[#FFD43B] text-white font-bold transition-transform duration-300 hover:scale-110 shadow-[0_0_20px_rgba(255,138,61,0.5)] min-w-[120px] text-center"
