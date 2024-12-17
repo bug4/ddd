@@ -1,3 +1,4 @@
+// App.jsx
 import Spline from '@splinetool/react-spline';
 import { useState, useEffect } from 'react';
 
@@ -6,10 +7,22 @@ export default function App() {
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [activeKey, setActiveKey] = useState(null);
   const [sceneLoaded, setSceneLoaded] = useState(false);
+  const [currentTip, setCurrentTip] = useState(0);
+
+  const tips = [
+    "Use SPACE to jump higher! ⬆️",
+    "Collect coins for extra points! 🪙",
+    "Beat your previous time! ⚡",
+    "Find secret shortcuts! 🗺️"
+  ];
 
   useEffect(() => {
-    const loadingDuration = 4000; // 4 seconds
-    const intervalTime = 20; // Update every 20ms for smooth animation
+    const tipInterval = setInterval(() => {
+      setCurrentTip(prev => (prev + 1) % tips.length);
+    }, 1000);
+
+    const loadingDuration = 4000;
+    const intervalTime = 20;
     const steps = loadingDuration / intervalTime;
     const incrementValue = 100 / steps;
 
@@ -39,6 +52,7 @@ export default function App() {
     
     return () => {
       clearInterval(loadingInterval);
+      clearInterval(tipInterval);
       window.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('keyup', handleKeyUp);
     };
@@ -49,9 +63,9 @@ export default function App() {
   if (loading) {
     return (
       <div className="fixed inset-0 bg-black flex flex-col items-center justify-center">
-        <div className="text-9xl font-black tracking-wider mb-12">
+        <div className="text-9xl font-black tracking-wider mb-12 relative">
           <span 
-            className="bg-clip-text text-transparent bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-500"
+            className="bg-clip-text text-transparent bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-500 animate-pulse"
             style={{ 
               WebkitTextStroke: '2px rgba(0,0,0,0.3)',
               textShadow: '0 4px 12px rgba(234,179,8,0.3)'
@@ -59,18 +73,45 @@ export default function App() {
           >
             REMY
           </span>
+          
+          <div className="absolute -inset-10 pointer-events-none">
+            {[...Array(20)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-2 bg-yellow-400 rounded-full animate-float"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 2}s`,
+                  animationDuration: `${2 + Math.random() * 2}s`
+                }}
+              />
+            ))}
+          </div>
         </div>
         
-        <div className="w-96 flex flex-col items-center gap-4">
+        <div className="w-96 flex flex-col items-center gap-6">
+          <div className="text-yellow-400 text-xl font-bold text-center min-h-[2rem] transition-all duration-500">
+            {tips[currentTip]}
+          </div>
+
           <div className="w-full h-4 bg-yellow-900/30 rounded-full overflow-hidden">
             <div 
               className="h-full bg-gradient-to-r from-yellow-400 to-yellow-500 transition-all duration-100 ease-out rounded-full"
               style={{ width: `${loadingProgress}%` }}
             />
           </div>
+          
           <div className="text-yellow-400 font-bold text-xl">
             {Math.round(loadingProgress)}%
           </div>
+        </div>
+
+        <div className="hidden">
+          <Spline 
+            scene="https://prod.spline.design/NktxLAt1ObMGlUju/scene.splinecode" 
+            onLoad={() => setSceneLoaded(true)}
+          />
         </div>
       </div>
     );
@@ -78,7 +119,6 @@ export default function App() {
 
   return (
     <div>
-      {/* Yellow Background with Loading Text */}
       <div className="fixed inset-0 bg-yellow-400 flex items-center justify-center">
         {!sceneLoaded && (
           <div className="text-4xl font-bold text-yellow-700 animate-pulse">
@@ -87,7 +127,6 @@ export default function App() {
         )}
       </div>
 
-      {/* REMY Logo */}
       <div className="fixed top-8 left-1/2 -translate-x-1/2 z-40">
         <h1 className="text-9xl font-black tracking-wider">
           <span 
@@ -102,7 +141,6 @@ export default function App() {
         </h1>
       </div>
 
-      {/* Navigation */}
       <nav className="fixed bottom-12 left-1/2 -translate-x-1/2 z-40 flex gap-6">
         <a
           href="https://x.com/RemyValley"
@@ -123,7 +161,6 @@ export default function App() {
         </a>
       </nav>
 
-      {/* Game Controller */}
       <div className="fixed left-12 top-1/2 -translate-y-1/2 z-40">
         <div className="bg-yellow-900/30 p-8 rounded-3xl backdrop-blur-md border border-yellow-500/30 shadow-[0_0_30px_rgba(252,211,77,0.15)]">
           <div className="flex flex-col items-center gap-3">
@@ -187,7 +224,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* Spline Scene */}
       <div className="relative z-10" style={{ width: '100vw', height: '100vh' }}>
         <Spline 
           scene="https://prod.spline.design/NktxLAt1ObMGlUju/scene.splinecode" 
