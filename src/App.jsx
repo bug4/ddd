@@ -5,6 +5,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [activeKey, setActiveKey] = useState(null);
+  const [sceneLoaded, setSceneLoaded] = useState(false);
 
   useEffect(() => {
     const loadingDuration = 2000; // 2 seconds
@@ -77,6 +78,15 @@ export default function App() {
 
   return (
     <div>
+      {/* Yellow Background with Loading Text */}
+      <div className="fixed inset-0 bg-yellow-400 flex items-center justify-center">
+        {!sceneLoaded && (
+          <div className="text-4xl font-bold text-yellow-700 animate-pulse">
+            Loading Ramy's Valley
+          </div>
+        )}
+      </div>
+
       {/* RAMY Logo */}
       <div className="fixed top-8 left-1/2 -translate-x-1/2 z-40">
         <h1 className="text-9xl font-black tracking-wider">
@@ -178,8 +188,11 @@ export default function App() {
       </div>
 
       {/* Spline Scene */}
-      <div style={{ width: '100vw', height: '100vh' }}>
-        <Spline scene="https://prod.spline.design/NktxLAt1ObMGlUju/scene.splinecode" />
+      <div className="relative z-10" style={{ width: '100vw', height: '100vh' }}>
+        <Spline 
+          scene="https://prod.spline.design/NktxLAt1ObMGlUju/scene.splinecode" 
+          onLoad={() => setSceneLoaded(true)}
+        />
       </div>
     </div>
   );
