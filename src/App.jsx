@@ -57,7 +57,7 @@ export default function App() {
               textShadow: '0 4px 12px rgba(234,179,8,0.3)'
             }}
           >
-            RAMY
+            REMY
           </span>
         </div>
         
@@ -82,12 +82,12 @@ export default function App() {
       <div className="fixed inset-0 bg-yellow-400 flex items-center justify-center">
         {!sceneLoaded && (
           <div className="text-4xl font-bold text-yellow-700 animate-pulse">
-            Loading Ramy's Valley
+            Loading Remy's Valley
           </div>
         )}
       </div>
 
-      {/* RAMY Logo */}
+      {/* Remy Logo */}
       <div className="fixed top-8 left-1/2 -translate-x-1/2 z-40">
         <h1 className="text-9xl font-black tracking-wider">
           <span 
@@ -97,7 +97,7 @@ export default function App() {
               textShadow: '0 4px 12px rgba(234,179,8,0.3)'
             }}
           >
-            RAMY
+            Remy
           </span>
         </h1>
       </div>
