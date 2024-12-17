@@ -152,7 +152,7 @@ export default function App() {
         </a>
 
         <a
-          href="https://pump.fun/"
+          href="https://pump.fun/coin/7ExcCTeumiKZfu8z64iGHj29NFcLDViUqvra4zKQpump"
           target="_blank"
           rel="noopener noreferrer"
           className="px-12 py-4 rounded-2xl bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-400 text-white text-xl font-bold transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(252,211,77,0.5)] shadow-lg transform hover:-translate-y-1"
