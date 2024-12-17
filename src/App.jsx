@@ -8,7 +8,7 @@ export default function App() {
   const [sceneLoaded, setSceneLoaded] = useState(false);
 
   useEffect(() => {
-    const loadingDuration = 2000; // 2 seconds
+    const loadingDuration = 4000; // 4 seconds
     const intervalTime = 20; // Update every 20ms for smooth animation
     const steps = loadingDuration / intervalTime;
     const incrementValue = 100 / steps;
@@ -87,7 +87,7 @@ export default function App() {
         )}
       </div>
 
-      {/* Remy Logo */}
+      {/* REMY Logo */}
       <div className="fixed top-8 left-1/2 -translate-x-1/2 z-40">
         <h1 className="text-9xl font-black tracking-wider">
           <span 
